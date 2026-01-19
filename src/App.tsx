@@ -1,7 +1,12 @@
-import './App.css'
+import './common.scss'
+import {AppRoutes} from './routes'
 
 function App() {
-	return <></>
+	return (
+		<div className='app'>
+			<AppRoutes />
+		</div>
+	)
 }
 
 export default App
