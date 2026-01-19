@@ -1,9 +1,12 @@
+import {Button} from '../components/Button'
 export const firstPage = () => {
 	return (
 		<>
 			<form action=''>
 				<input></input>
-				<button></button>
+				<Button variant='main' tag='button'>
+					{'Перейти'}
+				</Button>
 			</form>
 		</>
 	)
