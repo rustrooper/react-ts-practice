@@ -11,7 +11,15 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	href?: string
 }
 
-export const Button = ({variant = 'main', tag, className, children, href, ...rest}: Props) => {
+type MyReadonly<T> = {
+	readonly [K in keyof T]: T[K]
+}
+
+type ReadonlyProps = MyReadonly<Props>
+
+export const Button = ({variant = 'main', tag, className, children, href, ...rest}: ReadonlyProps) => {
+	href = 'test'
+	alert(href)
 	if (tag === 'a')
 		return (
 			<a href={href} {...(rest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>
