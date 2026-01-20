@@ -18,3 +18,31 @@ function f1() {
 }
 
 f1()
+
+interface Car {
+	make: string
+	model: string
+	year: number
+	displayInfo: () => string // Метод возвращает строку
+}
+
+const car: Car = {
+	make: 'Tesla',
+	model: 'Model 3',
+	year: 2022,
+	displayInfo: function () {
+		return `text`
+	},
+}
+console.log(car)
+
+interface Dictionary {
+	[key: string]: string //объект может иметь любые строки в качестве ключей и соответствующие им строки в качестве значений
+}
+
+const dictionary: Dictionary = {
+	hello: 'привет',
+	world: 'мир',
+	type: 'тип',
+}
+console.log(dictionary)

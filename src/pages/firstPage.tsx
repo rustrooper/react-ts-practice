@@ -1,3 +1,4 @@
+import {Button} from '../components/Button'
 import './styles.scss'
 import {NavLink} from 'react-router-dom'
 
@@ -11,7 +12,9 @@ export const FirstPage = () => {
 					e.preventDefault()
 				}}>
 				<input placeholder='Ввведите данные'></input>
-				<button type='submit'>Отправить данные</button>
+				<Button tag='button' variant='main' href='aaaa'>
+					Отправить данные
+				</Button>
 				<NavLink to='/solution'>Solution</NavLink>
 			</form>
 		</>
