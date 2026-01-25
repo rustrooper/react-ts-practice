@@ -1,7 +1,6 @@
 import {Button} from '../components/Button'
 import './styles.scss'
 import {NavLink} from 'react-router-dom'
-import {Button} from '../components/Button'
 import {Clock} from '../components/Clock'
 
 export const FirstPage = () => {

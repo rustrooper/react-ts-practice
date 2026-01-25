@@ -46,3 +46,10 @@ const dictionary: Dictionary = {
 	type: 'тип',
 }
 console.log(dictionary)
+
+interface INumberArray {
+	[index: number]: string // ключи - индексы (числа), значения - строки
+}
+const names: INumberArray = ['Alice', 'Bob', 'Charlie']
+
+const names2: string[] = ['Alice', 'Bob', 'Charlie']
