@@ -54,9 +54,6 @@ let user = {
 	sayBy: function () {
 		return 'Good by, ' + name
 	},
-	sayU: () => {
-		return 'Goob by2, ' + this.name
-	},
 }
 
 function sayHi() {
@@ -65,5 +62,4 @@ function sayHi() {
 
 user.sayHi = sayHi
 console.log(user.sayBy())
-console.log(user.sayU())
 console.log(user.sayHi())
