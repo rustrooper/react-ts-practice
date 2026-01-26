@@ -82,3 +82,9 @@ interface IFigure {
 const square: IFigure = {height: 120, width: 150}
 square.height = 100
 square.width = 120
+interface INumberArray {
+	[index: number]: string // ключи - индексы (числа), значения - строки
+}
+const names: INumberArray = ['Alice', 'Bob', 'Charlie']
+
+const names2: string[] = ['Alice', 'Bob', 'Charlie']
