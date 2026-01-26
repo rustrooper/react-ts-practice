@@ -18,8 +18,6 @@ type MyReadonly<T> = {
 type ReadonlyProps = MyReadonly<Props>
 
 export const Button = ({variant = 'main', tag, className, children, href, ...rest}: ReadonlyProps) => {
-	href = 'test'
-	alert(href)
 	if (tag === 'a')
 		return (
 			<a href={href} {...(rest as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>

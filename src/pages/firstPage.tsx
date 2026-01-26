@@ -1,12 +1,11 @@
 import {Button} from '../components/Button'
 import './styles.scss'
 import {NavLink} from 'react-router-dom'
-import {Button} from '../components/Button'
 import {Clock} from '../components/Clock'
 
 export const FirstPage = () => {
 	return (
-		<>
+		<div className='wrapper'>
 			<form
 				className=''
 				action=''
@@ -17,12 +16,13 @@ export const FirstPage = () => {
 				<Button tag='button' variant='main' href='aaaa'>
 					Отправить данные
 				</Button>
-				<NavLink to='/solution'>Solution</NavLink>
-				<Button tag='button' variant='main'>
-					Перейти
-				</Button>
-				<Clock />
 			</form>
-		</>
+			<NavLink to='/solution1'>Solution</NavLink>
+			<Button className='button' tag='button' variant='main'>
+				Перейти
+			</Button>
+			<Clock />
+			<div>{[1, 2, 3, 4]}</div>
+		</div>
 	)
 }

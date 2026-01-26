@@ -46,3 +46,39 @@ const dictionary: Dictionary = {
 	type: 'тип',
 }
 console.log(dictionary)
+
+type userProps = {
+	name: string
+	age: number
+}
+const user: userProps = {name: 'Alice', age: 25}
+console.log('Тип user', typeof user)
+for (const key in user) {
+	console.log(key, user[key as keyof userProps])
+}
+
+Object.entries(user).forEach(([key, value]) => {
+	console.log(key, value) // TypeScript знает типы!
+})
+
+interface IStudent {
+	name: string
+	age: number
+	greet(text: string): string
+}
+const student: IStudent = {
+	name: 'Paul',
+	age: 12,
+	greet(text) {
+		return text
+	},
+}
+student.greet('hi')
+
+interface IFigure {
+	height: number
+	readonly width: number
+}
+const square: IFigure = {height: 120, width: 150}
+square.height = 100
+square.width = 120
