@@ -15,7 +15,7 @@
 
 // console.log(user2.sayHi())
 
-let user = {
+let user2 = {
 	firstName: 'Ilya',
 	lastName: 'Smirnov',
 	sayHi() {
@@ -33,8 +33,19 @@ let user = {
 	},
 }
 
-user.sayHi()
-user.sayBie()()
-user.fdSayHi()
+user2.sayHi()
+user2.sayBie()()
+user2.fdSayHi()
 
 const test = user.sayHi
+const user = {
+	name: 'Alex',
+	surname: 'Popov',
+	// fullName: this.name + this.surname, - ошибка, this определяется в момент вызова функции, а не в момент объявления
+	fullname() {
+		return this.name + this.surname
+	},
+	// fullnameArrow: () => this.name + this.surname, - ошибка, this в стрелочной функции будет браться из внешнего контекста
+}
+
+console.log(user.fullname())
