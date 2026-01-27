@@ -48,14 +48,31 @@ console.log(c())
 console.log('---------------------------')
 
 const name = 'Bill'
+let wrapper = {
+	name: 'Alex',
+	user: {
+		name: 'John',
+		sayBy: function () {
+			return 'Good by, ' + name
+		},
+		sayU: function () {
+			return () => {
+				return 'Wrapper.user.sayU => this: Hello, ' + this.name // this берется из внешней стрелочной функции
+			}
+		},
+	},
+}
+console.log(wrapper.user.sayU()())
 
 let user = {
 	name: 'John',
 	sayBy: function () {
 		return 'Good by, ' + name
 	},
-	sayU: () => {
-		return 'Goob by2, ' + this.name
+	sayU: function () {
+		return () => {
+			return 'Arrow! Hello, ' + this.name
+		}
 	},
 }
 
@@ -65,5 +82,5 @@ function sayHi() {
 
 user.sayHi = sayHi
 console.log(user.sayBy())
-console.log(user.sayU())
+console.log(user.sayU()())
 console.log(user.sayHi())
