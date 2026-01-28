@@ -17,21 +17,21 @@
 // c.peek();   // 10
 
 function createCounter(initial) {
-	let count = initial
-
-	const counter = function () {
-		return (count += 1)
+	function counter() {
+		return (counter.count += 1)
 	}
 
-	counter.peek = () => count
-	counter.set = number => (count = number)
-	counter.reset = () => (count = initial)
+	counter.count = initial
+	counter.peek = () => counter.count
+	counter.set = number => (counter.count = number)
+	counter.reset = () => (counter.count = initial)
 
 	return counter
 }
 
 const c = createCounter(10)
 console.log(c())
+c.count = 55
 console.log(c())
 console.log(c.set(20))
 console.log(c())
@@ -81,6 +81,8 @@ function sayHi() {
 }
 
 user.sayHi = sayHi
+let descriptor = Object.getOwnPropertyDescriptor(user, 'name')
+console.log(descriptor)
 console.log(user.sayBy())
 console.log(user.sayU()())
 console.log(user.sayHi())
