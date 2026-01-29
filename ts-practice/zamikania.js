@@ -86,3 +86,23 @@ console.log(descriptor)
 console.log(user.sayBy())
 console.log(user.sayU()())
 console.log(user.sayHi())
+
+let garage = {
+	toyota: true,
+	vag: false,
+	amount: 3,
+	visitors: [
+		{name: 'Alex', age: 20},
+		{name: 'Bill', age: 30},
+	],
+}
+
+const clone = structuredClone(garage)
+const clone2 = {...garage}
+const clone3 = garage
+
+garage.toyota = false
+garage.visitors.push({name: 'Sergey', age: 40})
+console.log('Глубокое копирование     ', clone)
+console.log('Поверхностное копирование', clone2)
+console.log('Ссылка на объект         ', clone3)
