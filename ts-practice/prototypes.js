@@ -32,4 +32,4 @@ Object.defineProperty(longEar, 'earLength', {writable: false})
 descriptor = Object.getOwnPropertyDescriptor(longEar, 'earLength')
 console.log(descriptor)
 
-Object.defineProperty(longEar, 'earLength', {writable: true})
+// Object.defineProperty(longEar, 'earLength', {writable: true})
