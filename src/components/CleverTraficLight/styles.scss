@@ -1,0 +1,74 @@
+.traffic-light {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	background: #222;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.lights {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.signal {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.signal.active {
+	box-shadow: 0 0 20px currentColor;
+}
+
+.timer {
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+button {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.emergency-btn {
+	background: #dc3545;
+	color: white;
+}
+
+.clear-emergency-btn {
+	background: #28a745;
+	color: white;
+}
+
+.status {
+	color: white;
+	font-size: 18px;
+}

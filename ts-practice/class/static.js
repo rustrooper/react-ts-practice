@@ -23,4 +23,5 @@ const user1 = new User('Anna')
 const user2 = new User('Bob')
 
 console.log(User.getCount())
+console.log(User.count)
 console.log(User.prototype)

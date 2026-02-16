@@ -53,5 +53,5 @@ class ExtendedClock extends Clock {
 let clock = new Clock({template: 'h:m:s'})
 // clock.start()
 
-let clock2 = new ExtendedClock({template: 'h:m:s', precision: 500})
+let clock2 = new ExtendedClock({template: 'h:m:s', precision: 1000})
 clock2.start()

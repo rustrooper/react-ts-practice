@@ -3,6 +3,7 @@ class CoffeeMachine {
 	#waterAmount = 0
 
 	get waterAmount() {
+		this.#checkWater(this.#waterAmount)
 		return this.#waterAmount
 	}
 
@@ -20,4 +21,8 @@ class CoffeeMachine {
 let coffeeMachine = new CoffeeMachine()
 // coffeeMachine.#waterLimit = 1000
 
-coffeeMachine.waterAmount = 200
+coffeeMachine.waterAmount = -1
+
+// console.log(coffeeMachine.checkWater)
+
+console.log(coffeeMachine.waterAmount)
